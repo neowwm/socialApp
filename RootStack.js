@@ -11,7 +11,11 @@ export default function RootStack() {
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="SignInScreen" component={SignInScreen} />
+        <Stack.Screen
+          name="SignInScreen"
+          component={SignInScreen}
+          options={{headerShown: false}}
+        />
         <Stack.Screen name="TabsScreen" component={TabsScreen} />
         <Stack.Screen name="PostScreen" component={PostScreen} />
       </Stack.Navigator>
