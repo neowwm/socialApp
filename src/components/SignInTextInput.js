@@ -3,7 +3,7 @@ import {StyleSheet, View} from 'react-native';
 import {TextInput} from 'react-native-gesture-handler';
 import {palette} from './../lib/colorPalette';
 
-export default function SignInTextInput() {
+export default function SignInTextInput({placeHolder, type}) {
   return (
     <View style={styles.block}>
       <TextInput style={styles.textInput} />

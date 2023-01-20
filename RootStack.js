@@ -4,6 +4,7 @@ import React from 'react';
 import SignInScreen from './screen/SignInScreen';
 import TabsScreen from './screen/TabsScreen';
 import PostScreen from './screen/PostScreen';
+import WelcomeScreen from './screen/WelcomeScreen';
 
 const Stack = createStackNavigator();
 
@@ -16,8 +17,17 @@ export default function RootStack() {
           component={SignInScreen}
           options={{headerShown: false}}
         />
+        <Stack.Screen
+          name="WelcomeScreen"
+          component={WelcomeScreen}
+          options={{headerShown: false}}
+        />
         <Stack.Screen name="TabsScreen" component={TabsScreen} />
-        <Stack.Screen name="PostScreen" component={PostScreen} />
+        <Stack.Screen
+          name="PostScreen"
+          component={PostScreen}
+          options={{headerShown: false}}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "883507314461",
+    "project_id": "minisns-836a3",
+    "storage_bucket": "minisns-836a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:883507314461:android:3694a81d081d947e806bf4",
+        "android_client_info": {
+          "package_name": "com.neoapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "883507314461-jag8pg7c2viijfvvig1u9po76q7kidtc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.neoapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "883507314461-2tbpdi318h1cpkkdiv9p3sqktq1jpslv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAJ0RGRMyhQ0or-kTaIebhXis446RaKDbI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "883507314461-2tbpdi318h1cpkkdiv9p3sqktq1jpslv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
