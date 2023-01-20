@@ -46,7 +46,6 @@ export default function SignInScreen({navigation}) {
 
     try {
       const {user} = await signUp(info);
-      console.log(user._user.email, 'signup');
       navigation.navigate('WelcomeScreen');
     } catch (e) {
       console.log(e.code);
@@ -59,6 +58,7 @@ export default function SignInScreen({navigation}) {
     const info = {email, password};
     try {
       const {user} = await signIn(info);
+      navigation.navigate('TabsScreen');
     } catch (e) {
       Alert.alert('로그인에 실패했습니다.');
     }
@@ -174,7 +174,10 @@ export default function SignInScreen({navigation}) {
           ) : (
             <>
               <View style={styles.buttonWrapper}>
-                <SignScreenButton content={'로그인'} />
+                <SignScreenButton
+                  onPress={onSignInHandler}
+                  content={'로그인'}
+                />
               </View>
               <View style={styles.buttonWrapper}>
                 <SignScreenButton onPress={onPress} content={'회원가입'} />
