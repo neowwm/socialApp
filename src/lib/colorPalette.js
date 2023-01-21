@@ -6,4 +6,7 @@ export const palette = {
     buttonTextColor: 'black',
     textInputBackgroundColor: 'white',
   },
+  tabBar: {activeTintColor: 'black'},
+  feedsScreen: {backgroundColor: 'white'},
+  myProfileScreen: {backgroundColor: 'white'},
 };
