@@ -1,4 +1,4 @@
-import {NavigationContainer} from '@react-navigation/native';
+import {NavigationContainer, useNavigation} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import React from 'react';
 import SignInScreen from './screen/SignInScreen';
@@ -6,16 +6,19 @@ import TabsScreen from './screen/TabsScreen';
 import PostScreen from './screen/PostScreen';
 import WelcomeScreen from './screen/WelcomeScreen';
 import {useAuth} from './contexts/AuthContexts';
+import {Alert, StyleSheet, Text} from 'react-native';
+import {useActionsContext, usePosts} from './contexts/DataAndActionContexts';
 
 const Stack = createStackNavigator();
 
 export default function RootStack() {
   const {currentUser} = useAuth();
+  console.log(currentUser);
 
   return (
     <NavigationContainer>
       <Stack.Navigator>
-        {!currentUser && (
+        {currentUser == null && (
           <Stack.Screen
             name="SignInScreen"
             component={SignInScreen}
@@ -45,3 +48,7 @@ export default function RootStack() {
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  postScreenRightHeader: {fontSize: 20, color: 'black', marginRight: 10},
+});

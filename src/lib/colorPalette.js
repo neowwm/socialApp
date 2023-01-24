@@ -9,4 +9,7 @@ export const palette = {
   tabBar: {activeTintColor: 'black'},
   feedsScreen: {backgroundColor: 'white'},
   myProfileScreen: {backgroundColor: 'white'},
+  postScreen: {backgroundColor: 'white'},
+  centerButtonColor: {backgroundColor: 'skyblue'},
+  postScreen: {headerFontColor: 'black'},
 };

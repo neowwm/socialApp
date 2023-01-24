@@ -1,8 +1,9 @@
 import React, {useEffect, useState} from 'react';
-import {View, StyleSheet, Text} from 'react-native';
+import {View, StyleSheet, Text, Alert} from 'react-native';
 import {FlatList} from 'react-native-gesture-handler';
 import {palette} from '../src/lib/colorPalette';
 import PostCard from './PostCard';
+import {usePosts} from './../contexts/DataAndActionContexts';
 
 const dummyData = [
   {
@@ -35,11 +36,15 @@ const dummyData = [
 ];
 
 export default function FeedsScreen() {
-  const [data, setData] = useState();
-
-  useEffect(() => {
-    setData(dummyData);
-  }, []);
+  const {posts} = usePosts();
+  console.log('Feeds: ', posts, posts.length);
+  const data = posts.map(post => ({
+    ...post,
+    user: '짱구',
+    image: 'https://picsum.photos/400/399',
+    userImage: 'https://picsum.photos/50',
+    time: '2022-11-10',
+  }));
 
   const ItemSeparatorComponent = () => {
     return <View style={styles.separator}></View>;
@@ -61,6 +66,7 @@ export default function FeedsScreen() {
   return (
     <View style={styles.block}>
       <FlatList
+        keyExtractor={item => item.id}
         data={data}
         renderItem={renderItem}
         ItemSeparatorComponent={ItemSeparatorComponent}

@@ -8,14 +8,7 @@ import {
   View,
 } from 'react-native';
 
-export default function PostCard({
-  user,
-  title,
-  time,
-  content,
-  image,
-  userImage,
-}) {
+export default function PostCard({title, time, content, image, userImage}) {
   const {width, height} = useWindowDimensions();
   return (
     <>
