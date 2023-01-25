@@ -6,11 +6,11 @@ import {palette} from './../lib/colorPalette';
 
 const BUTTON_SIZE = 50;
 
-export default function CenterButton() {
+export default function CenterButton({setModalVisible}) {
   const {width, height} = useWindowDimensions();
   const navigation = useNavigation();
   const onPress = () => {
-    navigation.navigate('PostScreen');
+    setModalVisible(true);
   };
 
   return (
